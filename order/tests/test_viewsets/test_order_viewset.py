@@ -11,13 +11,14 @@ from order.models import Order
 from product.factories import CategoryFactory, ProductFactory
 
 
-
 class TestOrderViewSet(APITestCase):
 
     client = APIClient()
 
     def setUp(self):
-        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user = User.objects.create_user(
+            username="testuser", password="testpassword"
+        )
         self.category = CategoryFactory(title="technology")
         self.product = ProductFactory(
             title="mouse", price=100, category=[self.category]
@@ -29,11 +30,9 @@ class TestOrderViewSet(APITestCase):
 
     def test_order_viewset(self):
         token = Token.objects.get(user__username=self.user.username)  # added
-        self.client.credentials(
-            HTTP_AUTHORIZATION="Token " + token.key)  
+        self.client.credentials(HTTP_AUTHORIZATION="Token " + token.key)
 
-        response = self.client.get(
-            reverse("order-list", kwargs={"version": "v1"}))
+        response = self.client.get(reverse("order-list", kwargs={"version": "v1"}))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -42,7 +41,7 @@ class TestOrderViewSet(APITestCase):
             order_data["results"][0]["product"][0]["title"], self.product.title
         )
         self.assertEqual(
-            order_data["results"][0]["product"][0]["price"], self.product.price 
+            order_data["results"][0]["product"][0]["price"], self.product.price
         )
         self.assertEqual(
             order_data["results"][0]["product"][0]["active"], self.product.active
