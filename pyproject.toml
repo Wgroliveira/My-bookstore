@@ -16,7 +16,13 @@ django-debug-toolbar = "^4.4.6"
 psycopg2-binary = "^2.9.10"
 flake8 = "^7.1.1"
 
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+factory-boy = "^3.2.0"
+
+[tool.poetry.group.dev.dependencies]
+factory-boy = "^3.3.1"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
