@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-h7fr_hj)gb+c@axs79bk&=r#g-8+q9+j0i7%f!tfq%$iql-20t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-api.herokuapp.com', 'wagnerwgr.pythonanywhere.com']
 
 
 # Application definition
