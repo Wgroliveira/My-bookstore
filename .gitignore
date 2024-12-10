@@ -138,4 +138,4 @@ HEAD
 __pycache__
 *.pyc
 db.sqlite3
->>>>>>> demo-github-actions
+ demo-github-actions
