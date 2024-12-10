@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 __pycache__/
 *.pyc
 =======
@@ -131,4 +131,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
->>>>>>> 97cbbada17ab205f89f8750a2da530191730ad84
+HEAD
+ 97cbbada17ab205f89f8750a2da530191730ad84
+
+
+__pycache__
+*.pyc
+db.sqlite3
+>>>>>>> demo-github-actions

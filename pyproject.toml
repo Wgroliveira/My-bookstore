@@ -16,10 +16,15 @@ django-debug-toolbar = "^4.4.6"
 <<<<<<< HEAD
 whitenoise = "^6.8.2"
 gunicorn = "^23.0.0"
-=======
+
 psycopg2-binary = "^2.9.10"
 flake8 = "^7.1.1"
->>>>>>> 97cbbada17ab205f89f8750a2da530191730ad84
+ HEAD
+ 97cbbada17ab205f89f8750a2da530191730ad84
+
+whitenoise = "^6.8.2"
+gunicorn = "^23.0.0"
+ demo-github-actions
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.3.3"
