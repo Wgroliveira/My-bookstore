@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-h7fr_hj)gb+c@axs79bk&=r#g-8+q9+j0i7%f!tfq%$iql-20t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-api.herokuapp.com', 'wagnerwgr.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -57,6 +57,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "bookstore.urls"
+
+import os
+from pathlib import Path
+
+# Base directory for the project
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATES = [
     {
