@@ -4,6 +4,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 import git
 
+activate_this = '/home/wagnerwgr/venv/bin/activate_this.py'  # Caminho do seu ambiente virtual
+exec(open(activate_this).read(), {'__file__': activate_this})
+
 
 @csrf_exempt
 def update(request):
@@ -13,7 +16,7 @@ def update(request):
         stored on PythonAnywhere in the git.Repo() as parameter.
         Here the name of my directory is "test.pythonanywhere.com"
         '''
-        repo = git.Repo('/home/Wgroliveira/My-bookstore')
+        repo = git.Repo('/home/wagnerwgr/My-bookstore')
         origin = repo.remotes.origin
 
         origin.pull()
